@@ -4,14 +4,16 @@ namespace App\Livewire;
 
 use App\Models\Post;
 use Livewire\Attributes\Rule;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
+#[Title('Create Post')]
 class CreatePost extends Component
 {
     // title validation seprate
     #[Rule('required', message: 'You, add a title')]
     #[Rule('min:4', message: 'yo, too short')]
-    // public $title = '';
+    public $title = '';
 
     // // content validation seprate
     // #[Rule('required')]
@@ -32,7 +34,7 @@ class CreatePost extends Component
             'content' => $this->content,
         ]);
 
-        $this->redirect('/show-posts');
+        $this->redirect('/show-posts', navigate: true);
     }
     public function render()
     {

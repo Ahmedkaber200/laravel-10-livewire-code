@@ -15,7 +15,7 @@ class Todos extends Component
         $this->todos[] = $this->todo;
         $this->reset('todo');
     }
-
+    
     // capital word to create
     public function updatedTodo($value){
         $this->todo = strtoupper($value);

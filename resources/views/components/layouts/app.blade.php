@@ -11,15 +11,14 @@
 
     <nav>
     <!-- <a href="/" class="{{ request()->is('/') ? 'current' : '' }}">Todos</a> -->
-    <a href="/" class="current">Todos</a>
+    <a wire:navigate href="/" class="current">Todos</a>
 
         <!-- <a href="/" @class(['current' => request()->is('/')])>Todos</a> -->
-        <a href="/counter">Counter</a>
-        <a href="helloworld">Hello World</a>
-        <a href="show-posts">Show Post</a>
-        <a href="create-post">Create Post</a>
+        <a wire:navigate href="/counter">Counter</a>
+        <a wire:navigate href="helloworld">Hello World</a>
+        <a wire:navigate href="show-posts">Show Post</a>
+        <a wire:navigate href="create-post">Create Post</a>
     </nav>
-
         {{ $slot }}
     </body>
 </html>

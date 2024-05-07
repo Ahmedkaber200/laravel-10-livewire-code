@@ -4,6 +4,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Title</th>
                 <th>Content</th>
                 <th>Delete</th>
@@ -11,18 +12,8 @@
         </thead>
         <tbody>
             @foreach ($posts as $post)
-                <tr wire:key="{{ $post->id }}">
-                    <td>{{ strtoupper($post->title) }}</td>
-                    <td>{{ strtoupper(str($post->content)->words(10)) }}</td>
-                    <!-- <td>{{ str($post->content)->words(10) }}</td> -->
-                    <td>
-                        <button type="button" wire:click="delete({{ $post->id }})"
-                        wire:confirm="Are You Sure you want to delete this post!";
-                        >Delete</button>
-                    </td>
-                </tr>
+                <livewire:post-row :$post :key="$post->id">
             @endforeach
         </tbody>
     </table>
-
 </div>
