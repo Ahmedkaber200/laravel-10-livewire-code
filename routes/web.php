@@ -6,6 +6,7 @@ use App\Livewire\HelloWorld;
 use App\Livewire\ShowPosts;
 use App\Livewire\Todos;
 use App\Livewire\UpdatePost;
+use App\Livewire\ViewPost;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,5 +31,6 @@ Route::get('/show-posts', ShowPosts::class);
 Route::get('/create-post', CreatePost::class);
 Route::get('/update-post/{post}', UpdatePost::class);
 Route::get('/update-posts', UpdatePost::class)->name('update-post.edit');
+Route::get('/view-post/{post}', ViewPost::class);
 
 // Route::get('/update-post', UpdatePost::class);

@@ -5,7 +5,12 @@
     <td>{{ strtoupper(str($post->content)->words(10)) }}</td>
     <!-- <td>{{ str($post->content)->words(10) }}</td> -->
     <td>
-    <button type="button" onclick="window.location.href='update-post/{{ ($post->id) }}'">Update</button>
+    <!-- <button wire:click="update/({{ $post->id }})" class="btn btn-primary btn-sm">Edit</button> -->
+    <!-- <button type="button" wire:click="update-post/({{ $post->id }})">Update</button> -->
+
+    <button wire:navigate href='view-post/{{ ($post->id) }}'>View</button>
+
+    <button wire:navigate href='update-post/{{ ($post->id) }}'>Update</button>
 
     <!-- <form action="update-post/{{ ($post->id) }}"><button>Update</button>
     </form> -->
