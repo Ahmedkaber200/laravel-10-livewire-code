@@ -1,6 +1,12 @@
 <div>
     <h2>Posts:</h2>
 
+    @if (session()->has('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
+    
     <table class="table table-striped">
         <thead>
             <tr>

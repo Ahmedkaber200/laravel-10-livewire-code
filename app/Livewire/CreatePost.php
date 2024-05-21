@@ -14,10 +14,8 @@ class CreatePost extends Component
     #[Rule('required', message: 'You, add a title')]
     #[Rule('min:4', message: 'yo, too short')]
     public $title = '';
-
-    // // content validation seprate
-    // #[Rule('required')]
     
+    #[Rule('required')]
     // properties message
     public $content = '';
 
@@ -33,6 +31,8 @@ class CreatePost extends Component
             'title' => $this->title,
             'content' => $this->content,
         ]);
+
+        session()->flash('status', 'Post successfully add.');
 
         $this->redirect('/show-posts', navigate: true);
     }

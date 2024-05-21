@@ -23,14 +23,16 @@ class UpdatePost extends Component
  
     public function update(Post $post)
     {
-        // dd($post);
         $post = Post::findOrFail($this->id);
- 
+        // dd($post);
         $post->update([
             'title' => $this->title,
             'content' => $this->content,
         ]);
-        return Redirect::to('/show-posts');
+
+        session()->flash('status', 'Post successfully update.');
+
+        $this->redirect('/show-posts', navigate: true);
     }
     public function render()
     {

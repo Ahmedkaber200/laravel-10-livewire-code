@@ -1,5 +1,5 @@
 <div>
-    <h2>New Post</h2>
+    <h2>New Post Add</h2>
 
     Current Title: <span x-text="$wire.title.toUpperCase() + $wire.content"></span>
     <br>
@@ -10,20 +10,19 @@
         <span x-text="count"></span>
 
         <button x-on:click="count++">+</button>
-
     </div> -->
 
     <form wire:submit="save">
         <label>
             <span>Title</span>
-            <input type="text" wire:model="title">
+            <input type="text" wire:model.live="title">
             @error('title') <em>{{ $message }}</em>@enderror
         </label>
         <br>
         <br>
         <label>
             <span>Content</span>
-            <textarea type="text" wire:model="content"></textarea>
+            <textarea type="text" wire:model.live="content"></textarea>
             @error('content') <em>{{ $message }}</em>@enderror
             <br>
             <small>

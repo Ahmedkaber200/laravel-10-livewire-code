@@ -11,8 +11,7 @@
 
     <nav>
     <!-- <a href="/" class="{{ request()->is('/') ? 'current' : '' }}">Todos</a> -->
-    <a wire:navigate href="/" class="current">Todos</a>
-
+        <a wire:navigate href="/" class="current">Todos</a>
         <!-- <a href="/" @class(['current' => request()->is('/')])>Todos</a> -->
         <a wire:navigate href="/counter">Counter</a>
         <a wire:navigate href="helloworld">Hello World</a>
