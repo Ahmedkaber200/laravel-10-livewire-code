@@ -6,11 +6,15 @@
     Current Content: <span x-text="$wire.content.toUpperCase()"></span>
     <br>
     <br>
-    <!-- <div x-data=" { count: 0} ">
+
+    <div x-data=" { count: 0} ">
         <span x-text="count"></span>
 
         <button x-on:click="count++">+</button>
-    </div> -->
+    </div>
+
+    <br>
+    <br>
 
     <form wire:submit="save">
         <label>
