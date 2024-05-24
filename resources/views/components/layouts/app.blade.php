@@ -17,6 +17,7 @@
         <a wire:navigate href="helloworld">Hello World</a>
         <a wire:navigate href="show-posts">Show Post</a>
         <a wire:navigate href="create-post">Create Post</a>
+        <a wire:navigate href="students">Student Create</a>
     </nav>
         {{ $slot }}
     </body>
