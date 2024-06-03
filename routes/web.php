@@ -8,6 +8,9 @@ use App\Livewire\Todos;
 use App\Livewire\UpdatePost;
 use App\Livewire\ViewPost;
 use App\Livewire\StudentCrud;
+use App\Livewire\Index;
+use App\Livewire\CounterOne;
+use App\Livewire\Cart;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,5 +37,8 @@ Route::get('/update-post/{post}', UpdatePost::class);
 Route::get('/update-posts', UpdatePost::class);
 Route::get('/view-post/{post}', ViewPost::class);
 Route::get('/students', StudentCrud::class);
+Route::get('/index', Index::class);
+Route::get('/counter-ones', CounterOne::class);
+Route::get('/cart', Cart::class);
 
 // Route::get('/update-post', UpdatePost::class);

@@ -11,12 +11,12 @@ class StudentCrud extends Component
 {
     public $students, $name, $email, $phone, $student_id;
     public $isOpen = 0;
-
     public function render()
-    {   
+    {
+        // dd('render');
         return view('livewire.student-crud', [
             'students' => Student::all(),
-        ]);
+        ]);        
         // $this->students = Student::all();
         // dd($this->students);
         // return view('livewire.student-crud');
