@@ -11,6 +11,10 @@ use App\Livewire\StudentCrud;
 use App\Livewire\Index;
 use App\Livewire\CounterOne;
 use App\Livewire\Cart;
+use App\Livewire\Register;
+use App\Livewire\Login;
+use App\Livewire\Dashboard;
+use App\Livewire\Logout;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,5 +44,15 @@ Route::get('/students', StudentCrud::class);
 Route::get('/index', Index::class);
 Route::get('/counter-ones', CounterOne::class);
 Route::get('/cart', Cart::class);
+
+Route::group(['middleware'=>'guest'], function(){
+    Route::get('/register', Register::class)->name('register');
+    Route::get('/login', Login::class)->name('login');
+});
+
+Route::group(['middleware'=>'auth'], function(){
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::get('/logout', Logout::class)->name('logout');
+});
 
 // Route::get('/update-post', UpdatePost::class);
