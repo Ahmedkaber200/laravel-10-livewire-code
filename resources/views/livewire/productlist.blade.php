@@ -1,4 +1,5 @@
 <div class="container">
+    @include('components.layouts.flash-message')
     <div class="row">
         @foreach($products as $product)
         <div class="col-md-3">

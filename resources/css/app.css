@@ -1,6 +1,3 @@
-.current {
-    /* Your CSS rules for the "current" class */
-    font-weight: bold;
-    color: pink;
-    /* Add any other styles you want for the "current" class */
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
