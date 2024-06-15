@@ -6,7 +6,7 @@
   <button wire:click="test">Test</button>
   <button wire:click="myMethod">Click Me</button>
   <span class="p-2"></span>
-  <button class="" wire:click="incrementQty()">
+  <button class="" wire:click="incrementQty(2)">
     <span class="m-auto text-2xl font-thin">+</span>
   </button>
 </div>

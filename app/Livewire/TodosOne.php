@@ -7,7 +7,7 @@ use Livewire\Component;
 
 #[Title('TodosOne')]
 
-class Todosone extends Component
+class TodosOne extends Component
 {
     public $todo = '';
     public $todos = ['who cares'];

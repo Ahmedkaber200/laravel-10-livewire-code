@@ -28,12 +28,22 @@ class Shoppingcart extends Component
     public function incrementQty($id)
     {
         dd($id);
-        $cart = Cart::whereId($id)->first();
-        $cart->quantity += 1;
-        $cart->save();
-        session()->flash('success', 'Product quantity update !!!');
+        // $cart = Cart::whereId($id)->first();
+        // $cart->quantity += 1;
+        // $cart->save();
+        // session()->flash('success', 'Product quantity update !!!');
     }
+
+	public function decrementQty($id)
+	{
+		dd($id);
+		// $cart = Cart::whereId($id)->first();
+		// $cart->quantity -= 1;
+		// $cart->save();
+		// session()->flash('success', 'Product quantity update !!!');
+	}
+
     public function test() {
-        dd("test");
-      }
+		dd("test");
+	}
 }
