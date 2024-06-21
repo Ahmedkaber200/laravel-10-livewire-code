@@ -424,9 +424,11 @@
                     </li>
                     @else
 
+                    <livewire:cartcounter />
+<!-- 
                     <x-nav-link :href="route('shoppingcart')" :active="request()->routeIs('shoppingcart')">
                         {{ __('Cart') }}
-                    </x-nav-link>
+                    </x-nav-link> -->
 
                    
                     <li class="nav-item dropdown">

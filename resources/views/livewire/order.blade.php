@@ -1,0 +1,3 @@
+<div>
+    <livewire:shoppingcart/>
+</div>

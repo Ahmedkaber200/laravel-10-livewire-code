@@ -16,6 +16,8 @@ use App\Livewire\TodosOne;
 use App\Livewire\Logout;
 use App\Livewire\Shoppingcart;
 use App\Livewire\Productlist;
+use App\Livewire\Order;
+use App\Livewire\EmptyCart;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,7 +35,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', Productlist::class);
+Route::get('/', Productlist::class)->name('home');
 Route::get('/todos-one', TodosOne::class);
 Route::get('/counter', Counter::class);
 Route::get('/helloworld', HelloWorld::class);
@@ -57,5 +59,15 @@ Route::group(['middleware'=>'auth'], function(){
 });
 
 Route::get('/shoppingcart',Shoppingcart::class)->name('shoppingcart');
+
+Route::get('/order-success',Order::class)->name('order-success');
+
+Route::get('/empty-cart',EmptyCart::class)->name('empty-cart');
+
+
+// Route::get('/order-success', function () {
+//     return view('shoppingcart');
+// })->name('order.success');
+
 
 // Route::get('/update-post', UpdatePost::class);
